@@ -1,0 +1,20 @@
+[package]
+name = "runa"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+name = "runa"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22.3", features = ["extension-module"] }
+ndarray = "0.16.1"
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "tensor_ops"
+harness = false
